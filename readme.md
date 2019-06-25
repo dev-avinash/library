@@ -55,3 +55,4 @@ Use the appropriate directory for your code. A basic example has been provided f
 
 # Further Improvement
 - The salt for password hashing is kept in config file, this can improved further by having different salts for different users and saving the salts in the database. This will further enhance the security aspect.
+- The seeds are added to database in a custom manner, however a proper framework like sequelize-cli can be used.
