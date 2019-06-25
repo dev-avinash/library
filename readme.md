@@ -1,4 +1,6 @@
-# Express Coding Challenge
+# Problem
+
+## Express Coding Challenge
 The premise of this challenge is to see the approach you take to:
 - Use an ORM to interact with a simple database model
 - Create a basic routing mechanism for HTTP requests
@@ -8,7 +10,7 @@ The premise of this challenge is to see the approach you take to:
 
 Please clone this repository and send through your completed coding challenge using whatever you feel fit. We'll take a look and then have a chat about the decisions you took and challenges you encountered. Thanks for taking the time.
 
-## Challenge
+### Challenge
 1. Use [Sequelize](http://docs.sequelizejs.com/manual/installation/getting-started) or [Mongoose](https://mongoosejs.com/) to define:
 
    1.1. A **`User`** model which should have basic identifying information:
@@ -39,21 +41,31 @@ Please clone this repository and send through your completed coding challenge us
     4.3 `GET /books` Once authenticated, responds with a JSON object containing a list of Books that the user has access to via their Institution.
 5. (Optional) Provide a [Postman](https://www.getpostman.com/) collection which performs some basically functionality on the routes you've created.
 
-## Things to keep in mind
+### Things to keep in mind
 - Security
 - Scalability
 - Consistency
 - Testing.
 
-## Running this application
+### Running this application
 You can run the application by typing:
 `npm install` followed by `npm start` 
 
-## The structure of this repository
+### The structure of this repository
 The structure of this repository should be relatively self-explanatory. 
 Use the appropriate directory for your code. A basic example has been provided for the index route.
 
-# Further Improvement
+# Solution
+
+### Steps
+- `git clone https://github.com/ankitmblock/library.git`
+- `npm install`
+- `npm start`
+
+### Postman Collection
+- `https://www.getpostman.com/collections/a08f9e318f944cb8b64d`
+
+### Further Improvement
 - The salt for password hashing is kept in config file, this can improved further by having different salts for different users and saving the salts in the database. This will further enhance the security aspect.
 - The seeds are added to database in a custom manner, however a proper framework like sequelize-cli can be used.
 - The Authentication module is based on (username/password) based Basic Authorization. However, we can introduce lot more sophisticated mechanisms like, JWT token, Custom token based bearer authentication etc.
