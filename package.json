@@ -6,9 +6,10 @@
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Ankit Mahajan <ankitm.block@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "express": "^4.16.4"
   }
 }
