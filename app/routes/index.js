@@ -1,9 +1,9 @@
-const Responder = require('./../../lib/expressResponder')
+const initBookRoutes = require('./book')
+const initUserRoutes = require('./user')
 
 function initRoutes (app) {
-  app.get('/', (req, res) => {
-    Responder.success(res, `Express Code Challenge Started`)
-  })
+  app.use('/books', initBookRoutes())
+  app.use('/users', initUserRoutes())
 }
 
 module.exports = initRoutes
