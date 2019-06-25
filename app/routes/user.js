@@ -6,7 +6,7 @@ const UserController = require('../controllers/user')
 function initUserRoutes () {
   const UserRouter = express.Router()
 
-  UserRouter.get('/signin', passport.authenticate('basic'), UserController.login)
+  UserRouter.post('/signin', passport.authenticate('basic'), UserController.login)
   UserRouter.post('/create', UserController.signup)
 
   return UserRouter

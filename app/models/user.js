@@ -31,7 +31,7 @@ const UserSchema = (sequelize) => {
     }
   }, {
     hooks: {
-      beforeFind: (user) => {
+      beforeCount: (user) => {
         if (user.where && user.where.password) {
           user.where.password = createHash(user.where.password, process.env.PASSWORD_SALT)
         }
