@@ -1,5 +1,9 @@
 const Sequelize = require('sequelize')
 
+const BookSchema = require('./book')
+const UserSchema = require('./user')
+const InstitutionSchema = require('./institution')
+
 const dbsettings = {
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
@@ -21,6 +25,16 @@ const sequelize = new Sequelize(
   dbsettings
 )
 
+const Book = BookSchema(sequelize)
+const User = UserSchema(sequelize)
+const Institution = InstitutionSchema(sequelize)
+
+User.belongsTo(Institution, { foreignKey: 'institution_id' })
+Book.belongsTo(Institution, { foreignKey: 'institution_id' })
+
 module.exports = {
+  Book,
+  Institution,
+  User,
   sequelize
 }
