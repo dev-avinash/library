@@ -52,3 +52,6 @@ You can run the application by typing:
 ## The structure of this repository
 The structure of this repository should be relatively self-explanatory. 
 Use the appropriate directory for your code. A basic example has been provided for the index route.
+
+# Further Improvement
+- The salt for password hashing is kept in config file, this can improved further by having different salts for different users and saving the salts in the database. This will further enhance the security aspect.
