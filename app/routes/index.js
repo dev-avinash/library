@@ -1,6 +1,8 @@
+const Responder = require('./../../lib/expressResponder')
+
 function initRoutes (app) {
   app.get('/', (req, res) => {
-    res.end(`Express Code Challenge Started`)
+    Responder.success(res, `Express Code Challenge Started`)
   })
 }
 
