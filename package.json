@@ -4,7 +4,8 @@
   "description": "A coding challenge to assess your ability to navigate an express server implementation.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "seed": "node seeds"
   },
   "devDependencies": {
     "eslint": "^6.0.1",
