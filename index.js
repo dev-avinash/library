@@ -1,10 +1,11 @@
-require('dotenv').config();
+require('dotenv').config()
 
-const express = require('express');
-const app = express();
+const app = require('./lib')
 
-const index = require('./app/routes/index.js');
-
-app.get('/', index);
-
-app.listen(process.env.PORT, () => console.log(`Open http://localhost:${process.env.PORT} to see a response.`));
+app.start()
+  .then(message => {
+    console.log(message) // eslint-disable-line no-console
+  })
+  .catch(error => {
+    console.error(error) // eslint-disable-line no-console
+  })
