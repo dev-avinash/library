@@ -7,7 +7,7 @@ const { Institution, User } = require('./../models')
 
 class UserController {
   static async login (req, res) {
-    Responder.success(res, 'Login Successful')
+    Responder.created(res, { result: 'Login Successful' })
   }
 
   static async signup (req, res) {
@@ -36,7 +36,7 @@ class UserController {
 
     await user.save()
 
-    Responder.success(res, 'User Created')
+    Responder.created(res, { result: 'User Created' })
   }
 }
 
