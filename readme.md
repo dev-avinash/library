@@ -60,7 +60,19 @@ Use the appropriate directory for your code. A basic example has been provided f
 ### Steps
 - `git clone https://github.com/ankitmblock/library.git`
 - `npm install`
+- `npm run seeds`
 - `npm start`
+
+### Directory Structure
+- `app` - Segregates the application related codebase
+- `lib` - Contains wrapper over other standard libraries
+- `seeds` - Custom build module to seed data to the database
+- `.env` - Configs for the application. Note: DB_PASSWORD and PASSWORD_SALT are kept in config only for demonstration purposes.
+- `.eslintrc` - Defines rules for Linting
+- `Dockerfile` - Steps to create a docker image
+- `.dockerignore` - File not to be part of docker image
+- `.gitignore` - File not to be pushed to git
+- `index.js` - Starting point of the application
 
 ### Postman Collection
 - `https://www.getpostman.com/collections/a08f9e318f944cb8b64d`
